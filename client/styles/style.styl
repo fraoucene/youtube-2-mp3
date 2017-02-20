@@ -1,0 +1,354 @@
+@import '_normalize.styl'
+@import '_typography.styl'
+@import '_animations.styl'
+
+body
+  background offwhite
+
+.photo-grid
+  display flex
+  flex-wrap wrap
+  max-width 1200px
+  margin: 60px auto auto auto
+  &.detail
+    max-width:1050px
+  
+.content-center
+  flex-wrap wrap
+  max-width 900px
+  margin 0 auto
+
+.grid-figure
+  flex-basis calc(25% - 4rem)
+  flex-grow 1
+  flex-shrink 0
+  margin 0 2rem 2rem 2rem
+  padding 2rem
+  border 1px solid lightgray
+  background white
+  box-shadow 0 0 0 5px rgba(0,0,0,0.03);
+  position relative
+  iframe
+    width:100%
+
+.single-photo
+  @extend .grid-figure
+  flex-basis calc(50% - 4rem)
+  max-width 900px
+  display flex
+  padding: 10px  
+  background white
+  .control-buttons
+    margin-top:5px
+    max-width 65%
+  .download
+    float: right
+    margin-top: 8%
+    border-radius:10%
+    iframe
+      width: 160px
+      height: 50px
+      color: red
+      border: 0px
+      border-radius: 10%
+      overflow: hidden
+
+.grid-photo
+  width calc(100% + 4rem)
+  margin-left -2rem
+  margin-top -2rem
+  max-width none
+
+// Comments
+.remove-comment
+  background none
+  border 0
+  line-height 1
+  opacity 0
+  float right
+  &:hover
+    color red
+
+.comment
+  border-bottom 1px solid lightgrey
+  padding 0.5rem 0
+  p
+    font-size 1.2rem
+    margin 0
+  strong
+    color colorUniv
+    margin-right 5px
+  &:hover
+    .remove-comment
+      opacity 1
+ 
+.comment-form 
+  input, textarea
+    width 100%
+    border 0
+    font-size 1.3rem
+    padding 1rem 0
+    border-bottom 1px solid lightgrey
+    outline none
+    resize vertical
+
+
+.grid-photo-wrap
+  position relative
+  width: 100%
+  .title-wrap
+    margin-left: 10px
+    p
+      min-height: 75px
+    
+.title-grid-wrap
+  height: 50px
+  margin-top: 5px
+  
+.likes-heart
+  background url('../img/ico-fb-pink.jpg') center no-repeat
+  background-size contain
+  font-size 2rem
+  padding 1rem
+  position absolute
+  color colorUniv
+  left 50%
+  top 50%
+  pointer-events none
+  
+
+/*  
+  Buttons  
+*/
+
+.control-buttons
+  display flex
+  justify-content space-between
+    
+button, .button
+  border 2px solid lighten(grey, 90%)
+  background none
+  flex-basis 48%
+  display inline-block
+  border-radius: 50%
+  line-height 2
+  text-decoration none
+  padding 5px
+  text-align center
+  font-size 15px
+  color colorUniv
+  transition all 0.2s
+  box-sizing padding-box
+  &:hover, &:focus
+    border-color colorUniv
+    outline 0
+
+.disabled
+  pointer-events none
+  opacity 0.5
+  &:hover, &:focus
+    border-color lightgrey
+    outline 0
+
+
+/*
+  Cowboy style speech bubble - you should probably use an SVG for this if you are doing more icons.
+*/
+.btn-fb
+  size = 1.25rem
+  width size * 1.2
+  height size 
+  background url('../img/ico-fb.png') center no-repeat
+  background-size contain
+  display inline-block
+  border-radius 50%
+  position relative
+  
+.btn-tweeter
+  size = 1.25rem
+  width size * 1.2
+  height size 
+  background url('../img/ico-tweeter.png') center no-repeat
+  background-size contain
+  display inline-block
+  border-radius 50%
+  position relative
+  
+.btn-music 
+  size = 1.25rem
+  width size * 1.2
+  height size 
+  background url('../img/ico-music.png') center no-repeat
+  background-size contain
+  display inline-block
+  border-radius 50%
+  position relative
+  
+.btn-play 
+  size = 1.25rem
+  width size * 1.2
+  height size 
+  background url('../img/ico-play-video.png') center no-repeat
+  background-size contain
+  display inline-block
+  border-radius 50%
+  position relative
+
+.btn-download 
+  size = 1.25rem
+  width size * 1.2
+  height size 
+  background url('../img/ico-download.png') center no-repeat
+  background-size contain
+  display inline-block
+  border-radius 50%
+  position relative
+  
+.overlay-mask 
+  position: fixed
+  width: 100%
+  height: 100%
+  background: rgba(0,0,0, 0.6)
+  z-index: 5001
+  top:0
+  left:0
+  text-align: center 
+  &.overlay-mask--hidden 
+    visibility: hidden
+  .overlay-loader 
+    margin-left: auto
+    margin-right: auto
+    display: block
+    position: relative
+    top: 42%
+
+.watch-view-count 
+  max-height: 24px
+  font-size: 16px
+  color: #666
+  white-space: nowrap
+  margin: 2px 0px
+  
+.nav-bar
+  position: fixed
+  z-index: 200
+  top: 0px
+  width: 100%
+  margin-bottom:40px;
+  .active
+    a
+      background: colorUniv !important
+
+.backToTop 
+  position: fixed
+  top: 46%
+  right: 20px
+  width: 67px
+  height: 67px
+  cursor: pointer
+  background: url('../img/back-to-top.png') 0 0 no-repeat
+  z-index: 4000
+
+.search-engine
+  background: url('../img/bgd-mea-home.jpg') center 0 no-repeat
+  background-size: cover
+  padding: 45px 0px
+  color: #FFF
+
+.borderTtl 
+  white-space: nowrap
+  text-align: center
+  text-transform: uppercase
+  font-size: 26px
+  font-size: 2.6rem
+  box-sizing: border-box
+  padding-top: 45px
+  margin-bottom: 30px
+  line-height: 36px
+  span 
+    &:before, &:after
+      content: '*';
+      display: table-cell;
+      width: 5%;
+      background: url('../img/bgd-border-ttl.png') repeat-x left 66%;
+      opacity: 3;
+    
+  strong
+    color: colorUniv
+
+  
+.intro
+  color: #FFF
+  font-size: 22px !important
+  font-size: 2.2rem !important
+  text-align: center
+  font-family: "Amaranth", arial, sans-serif   
+  
+.search-wrap
+  width: 65%
+  margin: auto
+  padding: 50px
+  button
+    background: colorUniv
+    color: white
+
+.btn-search
+  content: ""
+  width: 55px
+  height: 55px
+  position: absolute
+  right: 0
+  top: 0
+  background: url('../img/ico-search-alpha.png') 0 0 no-repeat
+  
+.footer
+  background: #313131
+  padding: 45px 0px
+  p
+    color: #9d9d9d
+  .links
+    padding:15px
+    a
+      padding: 0px 15px
+
+.top-viewed
+  text-align: center
+  a
+    color: white;
+    text-decoration: none;
+    padding 0px 50px
+    font-size: 15px
+    font-family: "Amaranth", arial, sans-serif
+    &:hover
+      color: colorUniv
+      
+.contact
+  padding: 5% 15%;
+  max-width: 1100px;
+  button
+    background: colorUniv
+    color: white
+    float: right
+  textarea
+    height: 150px
+    
+.pager
+  max-width: 30%;
+  margin-left: 35%;
+
+.top
+  background: white
+  padding: 16px 20%;
+  p
+    text-align: center
+    padding: 0 20%
+  h2
+    padding-top: 0px
+  span 
+    &:before, &:after
+      width:5%
+
+.home 
+  @extend .photo-grid
+  padding: 2% 10%
+
