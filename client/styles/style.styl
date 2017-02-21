@@ -33,24 +33,19 @@ body
 
 .single-photo
   @extend .grid-figure
-  flex-basis calc(50% - 4rem)
-  max-width 900px
+  flex-basis calc(25% - 4rem)
   display flex
   padding: 10px  
   background white
   .control-buttons
-    margin-top:5px
-    max-width 65%
+    margin-top:10px
   .download
     float: right
-    margin-top: 8%
     border-radius:10%
     iframe
-      width: 160px
-      height: 50px
-      color: red
+      height: 40px
       border: 0px
-      border-radius: 10%
+      padding: 0px 15px;
       overflow: hidden
 
 .grid-photo
@@ -98,8 +93,7 @@ body
   width: 100%
   .title-wrap
     margin-left: 10px
-    p
-      min-height: 75px
+    margin-top: 10px
     
 .title-grid-wrap
   height: 50px
@@ -130,7 +124,6 @@ button, .button
   background none
   flex-basis 48%
   display inline-block
-  border-radius: 50%
   line-height 2
   text-decoration none
   padding 5px
@@ -346,9 +339,6 @@ button, .button
     padding-top: 0px
   span 
     &:before, &:after
-      width:5%
+      width:2.5%
 
-.home 
-  @extend .photo-grid
-  padding: 2% 10%
 
