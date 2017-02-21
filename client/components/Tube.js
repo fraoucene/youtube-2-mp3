@@ -30,8 +30,8 @@ var Tube = React.createClass({
 							img={tube.image}
 							type="video"
 							play={1}
-							height={180}
-							width={220}
+							height={'100%'}
+							width={'100%'}
 					  	/>
 					</div>
 					<div className="title-wrap">
@@ -44,16 +44,16 @@ var Tube = React.createClass({
 		          		</div>
 					<div className="control-buttons">
 					    <div className="button">
-						<span className="btn-fb"></span>
+							<span className="btn-fb"></span>
 					    </div>
 					    <div className="button" >
-						<span className="btn-tweeter"></span>
+							<span className="btn-tweeter"></span>
 					    </div>
 					    <div className="button" onClick={this.onShowVideo}>
-						<span className="fa fa-play"></span>
+							<span className="fa fa-play"></span>
 					    </div>
-					    <div className="download">
-						<iframe scrolling="no"  src={"//www.youtubeinmp3.com/fr/widget/button/?video=https://www.youtube.com/watch?v=" + tube.id + "&color=cc1f5e" } />
+					    <div className="button">
+							<a className="btn-download" href={"//www.youtubeinmp3.com/fetch/?video=https://www.youtube.com/watch?v=" + tube.id}/>
 					    </div>
 					</div>
 				</div>	
