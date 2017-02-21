@@ -38,6 +38,11 @@ module.exports = {
       test: /\.styl$/, 
       include: path.join(__dirname, 'client'),
       loader: 'style-loader!css-loader!stylus-loader'
+    },
+     {
+      test: /\.(png|woff|woff2|eot|ttf|svg|jpg|gif)$/, 
+      include: path.join(__dirname, 'client'),
+      loader: 'url-loader?limit=100000' 
     }
     ]
   }

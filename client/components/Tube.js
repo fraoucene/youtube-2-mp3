@@ -1,7 +1,6 @@
 import React from 'react';
 import numeral from '../utils/numeral';
 import { Link } from 'react-router';
-import ReactPlayer from 'react-player';
 import VideoPlayer from './VideoPlayer';
 
 numeral.locale('fr');

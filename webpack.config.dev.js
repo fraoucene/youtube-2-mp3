@@ -34,7 +34,6 @@ module.exports = {
       test: /\.(png|woff|woff2|eot|ttf|svg|jpg|gif)$/, 
       include: path.join(__dirname, 'client'),
       loader: 'url-loader?limit=100000' 
-
     }
     ]
   }
