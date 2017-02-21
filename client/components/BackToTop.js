@@ -10,7 +10,6 @@ const BackToTop = React.createClass({
     componentDidMount: function() {
         this.scrollHandler();
         window.onscroll = this.scrollHandler;
-        //window.addEventListener('scroll', this.scrollHandler);
     }, 
 
     componentWillUnmount: function componentWillUnmount() {
@@ -18,7 +17,6 @@ const BackToTop = React.createClass({
     }, 
 
 	scrollHandler: function() {
-		console.log("window.pageYOffset = ", window.pageYOffset);
         if (window.pageYOffset > 400) {
             this.setState({ show: true });
         } else {

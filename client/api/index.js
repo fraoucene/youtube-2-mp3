@@ -1,7 +1,6 @@
 import axios from 'axios';
 import * as Mapper from '../utils/Mapper';
 import  *  as CONSTANTS from "./constants";
-console.log("Mapper", Mapper);
 
 const dataService = store => next => action => {
   	next(action)
