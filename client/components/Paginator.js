@@ -4,8 +4,8 @@ import { Pager } from 'react-bootstrap';
 
 var Paginator = React.createClass({
 	
-
 	render() {
+		window.scrollTo(0, 400);
 		return <Pager>
 		    <Pager.Item 
 		    	previous

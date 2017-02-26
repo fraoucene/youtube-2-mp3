@@ -7,7 +7,7 @@ import { LIMIT_VALUE, API_PLAYLIST_TYPE } from '../api/constants';
 const PlayListGrid = React.createClass({
 
 	componentDidMount: function() {
-		this.props.setKind(API_PLAYLIST_TYPE);
+		this.props.setKind(API_PLAYLIST_TYPE);	
 	},
 
 	render() {
